@@ -7,5 +7,6 @@ module.exports = {
     mongodb: {
         url : 'mongodb://127.0.0.1:27017/club'
     },
+    schemeConf: path.join(__dirname, './default.scheme'),
     routerConf: 'routers'
 };

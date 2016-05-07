@@ -7,6 +7,7 @@
 |- app.js
 |- config/  配置文件
 |  |- default.js
+|  |- default.scheme.js 验证规则
 |  |_ production.js
 |- lib/ 一般代码文件
 |- models/ 模型文件
