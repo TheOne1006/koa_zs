@@ -6,4 +6,14 @@
 ## 自动化
 
 1. gulp
-2. 
+
+## 构建基础文件
+
+1. lib
+2. models
+3. routers
+
+## theme
+前端 view, 因为使用 `ejs`, 可以加载一些需要的 `js` 扩展
+
+1. 扩展filter
