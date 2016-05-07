@@ -2,9 +2,9 @@
   "name": "koa_sz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,11 @@
     "koa": "^1.2.0",
     "koa-errorhandler": "^0.1.1",
     "koa-logger": "^1.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-nodemon": "^2.0.6"
   }
 }
