@@ -14,4 +14,27 @@
 |- controllers/ 控制器
 |- themes/ 存放主题模板目录
 |- test/ 测试文件
-|_ node_modules/
+|- node_modules/
+
+
+## 路由结构
+routers/
+|-- create.js  发帖
+|-- index.js   主页
+|-- logout.js  登出
+|-- signin.js  登陆
+|-- singnup.js 注册
+|-- topic      话题
+|   |--  \*.id.js
+|-- user       用户
+    |-- \*name.js
+
+
+## 模型结构
+
+models/
+|-- comment.js 评论
+|-- index.js  
+|-- topic.js   话题
+|-- user.js    用户
+- - - -
