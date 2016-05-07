@@ -37,4 +37,14 @@ models/
 |-- index.js  
 |-- topic.js   话题
 |-- user.js    用户
+
+
+## theme
+|-- config.js      co-ejs 配置
+|-- package.json
+|-- helpers/
+|   |-- filters.js 自定义过滤器函数
+|   |-- locals.js  本地自定义变量
+|
+|
 - - - -
