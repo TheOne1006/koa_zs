@@ -35,15 +35,14 @@ merge(renderConf.locals || {}, core, false);
 app.use(errorhandler());
 app.use(bodyparser());
 app.use(logger());
-// app.use(session({
-//     store: new MongoStore(config.mongodb)
-// }));
-// app.use(flash());
-// app.use(scheme(config.schemeConf));
+app.use(session({
+    store: new MongoStore(config.mongodb)
+}));
+app.use(flash());
+app.use(scheme(config.schemeConf));
 
 app.use(mount('/public', staticServer(__dirname + '/public')));
 
-// // app.use(router(app, {root: config.routerConf}));
 app.use(render(app, renderConf));
 app.use(router(app, {
     root: config.routerConf

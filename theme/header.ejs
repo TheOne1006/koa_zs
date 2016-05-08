@@ -18,9 +18,12 @@
                 <%= $app.description %>
             </div>
             <div class="right menu">
-                    <!-- <a href="/logout" class="item"> 登出 </a> -->
+                <% if($this.session && $this.session.user) { %>
+                    <a href="/logout" class="item"> 登出 </a>
+                <% } else { %>
                     <a href="/signup" class="item"> 注册 </a>
                     <a href="/signin" class="item"> 登录 </a>
+                <% }  %>
             </div>
         </div>
     </div>
