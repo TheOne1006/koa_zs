@@ -1,0 +1,19 @@
+<% var userInfo = yield $User.getUserByName(name) %>
+
+<div class="ui cards">
+    <div class="card">
+        <div class="content">
+            <div class="userCard">
+                <img src="<%= userInfo.email | gravatar %>" alt="">
+                <div class="info">
+                    <p><%= userInfo.name %></p>
+                    <p class="meta"><%= userInfo.gender %></p>
+                </div>
+            </div>
+            <div class="description">
+                <%= userInfo.signature %>
+            </div>
+        </div>
+        
+    </div>
+</div>

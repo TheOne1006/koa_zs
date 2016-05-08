@@ -1,0 +1,26 @@
+{
+  "name": "koa_sz",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "theone <297190869@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/TheOne1006/koa_zs",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "Semantic-UI#^2.1.8"
+  }
+}

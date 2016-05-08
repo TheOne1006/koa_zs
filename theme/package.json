@@ -1,0 +1,14 @@
+{
+  "name": "zs_theme",
+  "version": "1.0.0",
+  "description": "论坛",
+  "tabs": ["全部","问答", "分享"],
+  "locale": "zh-cn",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gravatar": "^1.5.2",
+    "markdown-it": "^6.0.1",
+    "moment": "^2.13.0"
+  }
+}

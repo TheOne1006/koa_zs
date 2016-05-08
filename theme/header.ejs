@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>club_sz</title>
+    <link rel="stylesheet" href="/public/components/semantic/dist/semantic.css" charset="utf-8">
+    <link rel="stylesheet" href="/public/css/style.css" media="screen" title="no title" charset="utf-8">
+    <script src="/public/components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="/public/components/semantic/dist/semantic.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="ui fixed menu navbar">
+        <div class="container">
+            <a href="/" class="item">
+                <%= $app.name %>
+            </a>
+            <div class="item">
+                <%= $app.description %>
+            </div>
+            <div class="right menu">
+                    <!-- <a href="/logout" class="item"> 登出 </a> -->
+                    <a href="/signup" class="item"> 注册 </a>
+                    <a href="/signin" class="item"> 登录 </a>
+            </div>
+        </div>
+    </div>
+
+    <% if($this.flash && $this.flash.success) { %>
+        <div class="flash">
+            <div class="ui green message">
+                <i class="close icon"></i>
+                <%= $this.flash.success %>
+            </div>
+        </div>
+    <% } %>
+    <% if(this.flash && $this.flash.error) { %>
+        <div class="flash">
+            <div class="ui red message">
+                <i class="close icon"></i>
+                <%= $this.flash.error %>
+            </div>
+        </div>
+    <% } %>
+    <script>
+        $('.message .close').on('click', function () {
+            $(this).closet('.message').fadeOut();
+        });
+    </script>
