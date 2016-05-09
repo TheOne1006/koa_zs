@@ -11,7 +11,6 @@ var path = {
 gulp.task('browser-sync', ['nodemon'], function () {
     browserSync.init(null, {
         proxy: 'http://localhost:3000',
-        files: ['public/**/*.*', 'theme/*.ejs'],
         browser: 'google chrome',
         notify: false,
         port: 5000
@@ -20,19 +19,26 @@ gulp.task('browser-sync', ['nodemon'], function () {
 
 
 gulp.task('nodemon', function (cb) {
-    var called = false;
-
-    return $.nodemon({
-        script: 'app'
+    $.nodemon({
+        script: './app.js',
+        ignore:['README.md', 'node_modules/**', '.DS_Store', 'gulpfile.js', 'public/**','test/**'],
+        ext: 'js',
     }).on('start', function () {
-        if (!called) {
-            cb();
-            called = true;
-        }
+
+        setTimeout(cb, 1000);
+    }).on('restart', function () {
+        // 延迟1000s 执行
+        setTimeout(reload, 1000);
     });
+});
+
+gulp.task('watch-reload', function () {
+    gulp
+        .watch(['theme/*.ejs','public/css/*.*'])
+        .on('change', reload);
 });
 //dev task end
 
-gulp.task('serve', ['browser-sync'], function () {
+gulp.task('serve', ['browser-sync', 'watch-reload'], function () {
 
 });
