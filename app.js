@@ -27,7 +27,7 @@ var renderConf = require(config.renderConf);
 
 // debug('renderConf: ', renderConf);
 merge(renderConf.locals || {}, core, false);
-
+app.keys = [renderConf.locals.$app.name];
 /**
  * 中间件使用
  */
@@ -42,7 +42,7 @@ app.use(flash());
 app.use(scheme(config.schemeConf));
 
 app.use(mount('/public', staticServer(__dirname + '/public')));
-
+debug('renderConf', renderConf);
 app.use(render(app, renderConf));
 app.use(router(app, {
     root: config.routerConf

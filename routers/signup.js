@@ -11,7 +11,9 @@ exports.get = function* () {
 
 exports.post = function* () {
     var data = this.request.body;
+    debug('body', data);
     var userExit = yield $User.getUserByName(data.name);
+    debug('userExit', userExit);
     if(userExit) {
         this.flash = {eror: '用户已存在'};
         return this.redirect('/');

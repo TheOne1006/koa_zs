@@ -4,6 +4,7 @@ var gravatar = require('gravatar');
 var moment = require('moment');
 var md = require('markdown-it')();
 var pkg = require('../package');
+var debug = require('debug')('app:helpers:filters');
 
 moment.locale(pkg.locale);
 
