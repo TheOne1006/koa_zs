@@ -17,7 +17,7 @@ module.exports = {
     get gravatar () {
         return gravatar.url;
     },
-    get mrkdown() {
+    get markdown() {
         return function (content) {
             return md.render(content);
         };

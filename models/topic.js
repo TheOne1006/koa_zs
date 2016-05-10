@@ -10,6 +10,7 @@ var TopicSchema = new Schema({
     content: {type: String, required: true},
     tab: {type: String, required: true}, // 板块
     pv: {type: Number, default: 0},
+    comment: {type: Number, default: 0},
     created_at: {type: Date, default: Date.now},
     updated_at: {type: Date, default: Date.now}
 });

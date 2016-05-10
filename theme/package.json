@@ -2,7 +2,7 @@
   "name": "zs_theme",
   "version": "1.0.0",
   "description": "论坛",
-  "tabs": ["全部","问答", "分享"],
+  "tabs": ["全部","问答", "分享", "招聘", "技术"],
   "locale": "zh-cn",
   "author": "",
   "license": "ISC",
