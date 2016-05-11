@@ -17,3 +17,9 @@
 前端 view, 因为使用 `ejs`, 可以加载一些需要的 `js` 扩展
 
 1. 扩展filter
+
+
+## 利用 `node-inspector --web-port=8888` debug
+
+
+## 基本逻辑实现然后 完成 scheme

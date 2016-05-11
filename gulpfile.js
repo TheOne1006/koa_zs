@@ -34,7 +34,7 @@ gulp.task('nodemon', function (cb) {
 
 gulp.task('watch-reload', function () {
     gulp
-        .watch(['theme/*.ejs','public/css/*.*'])
+        .watch(['theme/*.ejs', 'theme/**/*.ejs','public/css/*.*'])
         .on('change', reload);
 });
 //dev task end

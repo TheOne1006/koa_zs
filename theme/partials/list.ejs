@@ -1,7 +1,7 @@
 <div class="ui bottom attached active tab segment">
     <div class="ui list">
         <% var topicsLen = topics.length; %>
-        <% topics.forEach(function(topic, index)) { %>
+        <% topics.forEach(function(topic, index) { %>
             <div class="item">
                 <a href="/user/<%= topic.user.name %>" class="ui image">
                     <img src="<%=: topic.user.email | gravatar %>" alt="">
@@ -24,6 +24,6 @@
             <% if(topicsLen > index + 1) { %>
                 <div class="ui divider"></div>
             <% } %>
-        <% } %>
+        <% }); %>
     </div>
 </div>

@@ -1,23 +1,17 @@
 <% include header %>
-
 <div class="container">
     <div class="ui two column centered grid">
-        <div class="right floated left aligend four wide column">
+        <div class="right floated left aligned four wide column">
+            <% include partials/userCard %>
             <% if($this.session.user) { %>
-                <% var name = $this.session.user.name %>
-                <% include partials/userCard %>
                 <% include partials/createCard %>
             <% } %>
             <% include partials/noReplyCard %>
             <% include partials/linkCard %>
-            <% include partials/pagination %>
         </div>
         <div class="left floated twelve wide column">
-            <% include partials/tab %>
-            <% include partials/list %>
-            <% include partials/pagination %>
+            <% // include partials/list %>
         </div>
     </div>
 </div>
-
 <% include footer %>

@@ -3,7 +3,7 @@
 var koa = require('koa');
 var logger = require('koa-logger');
 var errorhandler = require('koa-errorhandler');
-var debug = require('debug')('app:index'); 
+// var staticCache  = require('koa-static-cache');
 var bodyparser = require('koa-bodyparser');
 var session = require('koa-generic-session');
 var MongoStore = require('koa-generic-session-mongo');
@@ -28,20 +28,22 @@ var renderConf = require(config.renderConf);
 // debug('renderConf: ', renderConf);
 merge(renderConf.locals || {}, core, false);
 app.keys = [renderConf.locals.$app.name];
+
 /**
  * 中间件使用
  */
 // 捕捉下游错误
 app.use(errorhandler());
+app.use(mount('/public', staticServer(__dirname + '/public')));
 app.use(bodyparser());
 app.use(logger());
 app.use(session({
     store: new MongoStore(config.mongodb)
 }));
 app.use(flash());
+
 app.use(scheme(config.schemeConf));
 
-app.use(mount('/public', staticServer(__dirname + '/public')));
 
 app.use(render(app, renderConf));
 app.use(router(app, {
