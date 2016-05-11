@@ -23,3 +23,12 @@
 
 
 ## 基本逻辑实现然后 完成 scheme
+
+
+## 基本功能完成后,构建 test
+相关库
+1. mocha
+2. co-mocha
+3. co-supertest
+
+`request.agent(app)` 每次请求都会带上 cookies

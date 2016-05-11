@@ -50,7 +50,13 @@ app.use(router(app, {
     root: config.routerConf
 }));
 
-
-app.listen(3000, function() {
-    console.log('Server listing on : %s', 3000);
-});
+/**
+ * module.parent 判断文件是否被引用,被引用则导出 app.callback() 已供测试
+ */
+if(module.parent) {
+    module.exports = app.callback();
+} else {
+    app.listen(config.port, function() {
+        console.log('Server listing on : %s', config.port);
+    });
+}
